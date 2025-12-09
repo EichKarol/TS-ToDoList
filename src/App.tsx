@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
-import { Item } from './components/Item'
+import { Item } from './components/Item/Item'
 
 function App() {
   
