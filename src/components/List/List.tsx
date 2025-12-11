@@ -1,5 +1,8 @@
 
-type ListProps = {
+import { Item } from '../Item/Item';
+import type { ItemData } from '../Item/Item';
+
+interface ListProps {
     title: string;
     items: ItemData[];
 }
@@ -9,6 +12,14 @@ export function List({title, items}: ListProps) {
         <div>
             <h2>{ title }</h2>
             
+            {items.map((item) => (
+                <Item 
+                    key={item.title}  
+                    title={item.title}
+                    description={item.description}
+                    done={item.done}
+                />
+            ))}
         </div>
     )
 }

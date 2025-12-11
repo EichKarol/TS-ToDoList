@@ -3,6 +3,7 @@
     margin-block: 10px;
     border: 2px solid #203680;
     border-radius: 8px;
+    max-width: 600px;
 }
 
 .title {

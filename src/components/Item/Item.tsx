@@ -1,12 +1,12 @@
 import './Item.css'
 
-type ItemProps = {
+export type ItemData = {
     title: string;
     description: string;
     done: boolean;
 }
 
-export function Item({title, description, done}: ItemProps){
+export function Item({title, description, done}: ItemData){
     return(
         <div className={`box ${done ? 'done' : ''}`}>
             <p className='title'>{ title }</p>
