@@ -1,12 +1,12 @@
 import './Item.css'
 
-type ItemProps = {
+export type ItemData = {
     title: string;
     description: string;
     done: boolean;
 }
 
-export type ItemData = ItemProps
+type ItemProps = ItemData
 
 export function Item({title, description, done}: ItemProps){
     return(
