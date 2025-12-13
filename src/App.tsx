@@ -3,6 +3,7 @@ import './App.css'
 
 import { Item } from './components/Item/Item'
 import { List } from './components/List/List';
+import { Form } from './components/Form/Form';
 import type { ItemData } from './components/Item/Item';
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
   
   return (
     <>
-      <Item 
+      {/* <Item 
         title="Learn TypeScript" 
         description="Understand the basics of TypeScript for better code quality." 
         done={false} 
@@ -43,7 +44,8 @@ function App() {
         done={true} 
       />
 
-      <List title="Úkolníček" items={tasks} />
+      <List title="Úkolníček" items={tasks} /> */}
+      <Form />
       
     </>
   )

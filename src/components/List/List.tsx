@@ -18,6 +18,7 @@ export function List({title, items}: ListProps) {
                     title={item.title}
                     description={item.description}
                     done={item.done}
+                    priority={item.priority}
                 />
             ))}
         </div>

@@ -15,3 +15,13 @@
     text-decoration: line-through;
     opacity: 0.5;
 }
+
+.priority .low {
+    color: blue;
+    font-weight: bold;
+}
+
+.priority .high {
+    color: red;
+    font-weight: bold;
+}
