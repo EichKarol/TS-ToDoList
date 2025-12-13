@@ -12,22 +12,26 @@ function App() {
   {
      title: 'Příprava prezentace',
      description: 'Vytvořit prezentaci pro páteční meeting s klientem.',
-     done: true
+     done: true,
+      priority: 'high',
   },
   {
      title: 'Kontrola e-mailů',
      description: 'Projít doručenou poštu a odpovědět na důležité zprávy.',
-     done: false
+     done: false,
+     priority: 'normal'
   },
   {
      title: 'Plánování kampaně',
      description: 'Naplánovat marketingovou kampaň na příští měsíc.',
-     done: false
+     done: false,
+    priority: 'low'
   },
   {
      title: 'Testování aplikace',
      description: 'Otestovat nové funkce a nahlásit případné chyby.',
-     done: false
+      done: false,
+      priority: 'normal'
   }
   ])
   
