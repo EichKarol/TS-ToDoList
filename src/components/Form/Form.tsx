@@ -3,17 +3,24 @@ import './Form.css'
 
 type Priority = 'low' | 'normal' | 'high';
 
-type FormData = {
+export type FormData = {
     title: string;
     description: string;
     priority: Priority;
 }
 
-export function Form() {
+export type FormProps = {
+    onFormSubmit: (newTask: FormData) => void;
+}
+
+export function Form({onFormSubmit}: FormProps) {
 
     const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log('odesláno');
+        console.log(formData);
+        onFormSubmit(formData);
+        clearForm();
     }
 
     const handleChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement> | React.ChangeEvent<HTMLSelectElement>) => {
@@ -29,6 +36,14 @@ export function Form() {
         description: '',
         priority: 'normal',
     })
+
+    const clearForm = () => {
+        setFormData({
+            title: '',
+            description: '',
+            priority: 'normal',
+        })
+    }
 
 
     return (
@@ -51,8 +66,8 @@ export function Form() {
               value={formData.priority}
               onChange={handleChange}
             > 
-                <option value="low">low</option>
                 <option value="medium">normal</option>
+                <option value="low">low</option>
                 <option value="high">high</option>
             </select>
             

@@ -4,10 +4,11 @@ import './App.css'
 import { Item } from './components/Item/Item'
 import { List } from './components/List/List';
 import { Form } from './components/Form/Form';
-import type { ItemData } from './components/Item/Item';
 
-function App() {
-  const [tasks, setTasks] = useState<ItemData[]>([
+import type { ItemData } from './components/Item/Item';
+import type { FormData } from './components/Form/Form';
+
+const tasksData: ItemData[] = [
     
   {
      title: 'Příprava prezentace',
@@ -33,23 +34,28 @@ function App() {
       done: false,
       priority: 'normal'
   }
-  ])
+  ]
+
+function App() {
+  const [tasks, setTasks] = useState<ItemData[]>([...tasksData])
+
+  const handleFormSubmit = (newTask: FormData) => {
+    setTasks([
+      {
+        ...newTask,
+        done: false,
+       },
+      ...tasks
+    ]);
+  }
   
+    
   return (
     <>
-      {/* <Item 
-        title="Learn TypeScript" 
-        description="Understand the basics of TypeScript for better code quality." 
-        done={false} 
-      />
-      <Item 
-        title="Build a React App" 
-        description="Create a simple React application using TypeScript." 
-        done={true} 
-      />
-
-      <List title="Úkolníček" items={tasks} /> */}
-      <Form />
+    <Form onFormSubmit={handleFormSubmit}/>
+    
+      <List title="Úkolníček" items={tasks} />
+      
       
     </>
   )
