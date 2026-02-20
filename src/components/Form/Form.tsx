@@ -48,9 +48,9 @@ export function Form({onFormSubmit}: FormProps) {
 
     return (
     <div>
-        <h2>Formulář pro přidání úkolu</h2>
+        <h2 className='form-title'>Nový úkol</h2>
         <form className="form" onSubmit={handleSubmit}>
-            <label htmlFor='title'>Název úkolu</label>
+            <label htmlFor='title'>Název</label>
             <input 
               type="text" 
               id='title'
@@ -59,7 +59,7 @@ export function Form({onFormSubmit}: FormProps) {
               onChange={handleChange}
               />
 
-            <label htmlFor='priority'>Priorita úkolu</label>
+            <label htmlFor='priority'>Priorita</label>
             <select 
               name="priority" 
               id="priority"
@@ -71,7 +71,7 @@ export function Form({onFormSubmit}: FormProps) {
                 <option value="high">high</option>
             </select>
             
-            <label htmlFor='description'>Popis úkolu</label>
+            <label htmlFor='description'>Popis</label>
             <textarea 
               id='description'
               name="description" 

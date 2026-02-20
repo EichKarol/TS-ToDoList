@@ -1,0 +1,6 @@
+#root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}

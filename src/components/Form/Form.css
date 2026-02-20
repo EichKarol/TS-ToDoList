@@ -1,3 +1,11 @@
+.form-title{
+    text-align: center;
+    font-size: 1.3rem;
+    color: #172a3e;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -8,16 +16,23 @@
     border: 2px solid grey;
     border-radius: 10px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
-    background-color: #acd0f68a;
+    background-color: f4f1f1;
 }
 
-.form input, .form textarea {
+.form input, textarea, select {
     padding: 8px;
+    background-color: #ccc;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
     box-sizing: border-box;
+}
+
+.form input:focus, textarea:focus, select:focus {
+    background-color: #f4f1f1;
+    border-color: #172a3e;
+    outline: none;
 }
 
 .form select {
@@ -32,6 +47,10 @@
 
 label {
     font-weight: 700;
+    font-size: 0.7rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .FormBtn {
@@ -43,4 +62,12 @@ label {
     color: aliceblue;
     text-transform: uppercase;
     border-radius: 15px;
+}
+
+.FormBtn:hover {
+    background-color:  #f4f1f1;
+    color: #172a3e;
+    cursor: pointer;
+    box-shadow: #172a3e 0px 0px 10px;
+    
 }
