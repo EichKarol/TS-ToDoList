@@ -70,7 +70,7 @@ export function Form({onFormSubmit}: FormProps) {
                 <option value="low">low</option>
                 <option value="high">high</option>
             </select>
-            
+
             <label htmlFor='description'>Popis</label>
             <textarea 
               id='description'

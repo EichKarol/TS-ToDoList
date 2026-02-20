@@ -1,22 +1,23 @@
 .form-title{
     text-align: center;
     font-size: 1.3rem;
-    color: #172a3e;
+    color: var(--color-primary);
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .form {
     display: flex;
+    gap: 20px;
     flex-direction: column;
-    gap: 10px;
+    margin-inline: auto;
     margin-bottom: 20px;
     padding: 10px;
     max-width: 500px;
-    border: 2px solid grey;
+    border: 2px solid var(--color-primary);
     border-radius: 10px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
-    background-color: f4f1f1;
+    background-color: #fff;
 }
 
 .form input, textarea, select {
@@ -27,11 +28,26 @@
     font-size: 16px;
     width: 100%;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;;
+}
+
+input[type="text"] {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-size: 12px;
+    font-weight: 500;;
+    font-family: "Montserrat", sans-serif;
 }
 
 .form input:focus, textarea:focus, select:focus {
     background-color: #f4f1f1;
-    border-color: #172a3e;
+    border-color: var(--color-primary);
     outline: none;
 }
 
@@ -40,12 +56,13 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 500;
     width: 100%;
     box-sizing: border-box;
 }
 
 label {
+    color: var(--color-primary);
     font-weight: 700;
     font-size: 0.7rem;
     text-align: center;
@@ -58,7 +75,7 @@ label {
     padding: 8px;
     margin: 0 auto;
     width: 200px;
-    background-color: #172a3e;
+    background-color: var(--color-primary);
     color: aliceblue;
     text-transform: uppercase;
     border-radius: 15px;
@@ -66,8 +83,14 @@ label {
 
 .FormBtn:hover {
     background-color:  #f4f1f1;
-    color: #172a3e;
+    color: var(--color-primary);
     cursor: pointer;
-    box-shadow: #172a3e 0px 0px 10px;
+    box-shadow: var(--color-primary) 0px 0px 10px;
     
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }

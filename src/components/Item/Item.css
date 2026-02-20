@@ -1,7 +1,7 @@
 .item {
     padding: 5px 15px;
     margin-block: 10px;
-    border: 2px solid #203680;
+    border: 2px solid  var(--color-primary);
     border-radius: 8px;
     max-width: 600px;
 }
@@ -16,12 +16,23 @@
     opacity: 0.5;
 }
 
-.priority .low {
-    color: blue;
-    font-weight: bold;
+.priority {
+    font-size: 18px;
+    margin-left: 10px;
 }
 
-.priority .high {
-    color: red;
-    font-weight: bold;
+.flex {
+    display: flex;
+    justify-content: space-between;
 }
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}   
+

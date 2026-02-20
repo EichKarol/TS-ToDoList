@@ -1,4 +1,10 @@
+:root {
+    --color-primary: #203680;
+}
+
 body {
     margin: 0;
     padding: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
 }
