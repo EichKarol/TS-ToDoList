@@ -38,6 +38,7 @@ const tasksData: ItemData[] = [
 
 function App() {
   const [tasks, setTasks] = useState<ItemData[]>([...tasksData])
+  const [priorityFilter, setPriorityFilter] = useState<'all' | 'low' | 'normal' | 'high'>('all')
 
   const handleFormSubmit = (newTask: FormData) => {
     setTasks([
@@ -48,13 +49,22 @@ function App() {
       ...tasks
     ]);
   }
+
+  const filteredTasks = priorityFilter === 'all' 
+    ? tasks 
+    : tasks.filter(task => task.priority === priorityFilter)
   
     
   return (
     <>
     <Form onFormSubmit={handleFormSubmit}/>
     
-      <List title="Úkolníček" items={tasks} />
+      <List 
+        title="Úkolníček" 
+        items={filteredTasks}
+        priorityFilter={priorityFilter}
+        onPriorityFilterChange={setPriorityFilter}
+      />
       
       
     </>
